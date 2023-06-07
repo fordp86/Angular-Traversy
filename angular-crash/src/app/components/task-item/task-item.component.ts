@@ -9,9 +9,10 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class TaskItemComponent {
   @Input() task: Task;
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
-  onDelete(task: object) {
-    console.log(task);
+  onDelete(task: any) {
+    this.onDeleteTask.emit(task);
   }
 }
