@@ -13,7 +13,8 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class TaskService {
-  private apiUrl = 'https://taskapp-jsonserver-f5efffa85a40.herokuapp.com/';
+  private apiUrl =
+    'https://taskapp-jsonserver-f5efffa85a40.herokuapp.com/tasks';
 
   constructor(private http: HttpClient) {}
 
